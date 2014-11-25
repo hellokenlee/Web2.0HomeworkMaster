@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ajax test</title>
+﻿    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js">
+    </script>
+    
+    <script>
+    function myFunction()
+    {
+        $("h01").insert("Hello Prototype!");
+        $("a_button").observe("click", update);
+			
+        new Ajax.Request('/some_url', {
+			method:'get',
+			onSuccess: function(transport) {
+                var response = transport.responseText || "no response text";
+                alert("Success! \n\n" + response);
+            },
+			onFailure: function() {
+				alert('Something went wrong...');
+			}
+        });
+    }
+    
+    function update()
+    {
+        new Ajax.Updater('products', '/some_url', { method: 'get' });
+    }
+
+    Event.observe(window,"load",myFunction);
+    </script>
+</head>
+    <body>
+	<h1 id="h01"></h1>
+	<div id="products">(fetching product list ...)</div>
+	<form id="myform" action="/myform" method="get">
+            Username: <input type="text" name="user">
+            <input id="a_button" type="button" value="hello">
+        </form>
+    </body>
+</html>

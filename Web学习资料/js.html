@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JavaScripts demo</title>
+	﻿<script>
+		function displayDate()
+		{
+			document.getElementById("demo").innerHTML=Date();
+		}
+		function openDialog()
+		{
+			window.alert("this is a dialog")
+		}
+		function oh()
+		{
+			h=window.prompt("please input url");
+			document.getElementById("db").innerHTML="<a href=http://"+h+">baidu</a>"
+		}
+	</script>
+</head>
+<body>
+﻿	<h1>My First JavaScript</h1>
+	
+	<p id="demo">This is a paragraph.</p>
+	<p id="db">adssadsada</p>
+	<button type="button" onclick="displayDate()">Display Date</button>
+
+	<button type="button" onclick="openDialog() ">YO!</button>
+	<button type="button" onclick="oh()" >test</button>
+	<script>
+		window.alert("hello! I am javascript here")
+	</script>
+
+</body>
+</html>

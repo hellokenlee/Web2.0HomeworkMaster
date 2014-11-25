@@ -1,0 +1,4 @@
+http://www.confusedbycode.com/curl/#downloads
+下载with administrator privileges
+安装后进入C:\Program Files\cURL\bin     看到curl.exe
+进入这个路径使用curl http...命令

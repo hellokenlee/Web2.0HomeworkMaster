@@ -1,0 +1,49 @@
+.green_border{
+	border-style: solid;
+	border-width: 5px;
+	border-color: green;
+	background-color: white;
+	overflow: hidden;
+}
+.red{
+	border-style: solid;
+	border-width: 5px;
+	border-color: red;
+}
+.orange{
+	border-style: solid;
+	border-width: 5px;
+	border-color: orange;
+}
+.blue{
+	border-style: solid;
+	border-width: 5px;
+	border-color: blue;
+	background-color: #E8FBFB;
+	margin-top: 10px;
+	padding-top: 5px;
+	overflow: hidden;
+	float: right;
+	width: 60%;
+}
+.purple{
+	border-style: solid;
+	border-width: 5px;
+	border-color: purple;
+}
+body{
+	background-image: url(./images/background.gif);
+	padding-left: 10%;
+	padding-right: 10%;
+}
+img{
+	float: right;
+}
+.friends{
+	width:20%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: gray;
+	float: left;
+	margin-top: 10px;
+}

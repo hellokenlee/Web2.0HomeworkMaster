@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pimp My Text!</title>
+		<link href="pimpmytext.css" rel="stylesheet" type="text/css" />
+
+		<!--
+			This is a widely-used JavaScript "library" with many useful functions,
+			including the $() function, which we need. We'll discuss it in class.
+			Please don't remove this link or change the following URL; leave it as-is!
+		-->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script>	
+			function bigger_text()
+			{
+				$("#t1").css("font-size","24pt");
+			}
+			function bling()
+			{
+
+				if ($("#c1").prop("checked")==true)
+				{
+					$("#t1").css("text-decoration","underline");
+					$("#t1").css("text-decoration","blink");
+					$("#t1").css("color","green");
+					$("#t1").css("font-weight","bold");
+				}
+				else
+				{
+					$("#t1").css("text-decoration","none");
+					$("#t1").css("color","black");
+					$("#t1").css("font-weight","normal");
+				}
+			}
+			function snoopify()
+			{
+				var str=$("#t1").val();
+				alert(str);
+				var parts=str.split(".");
+				$("#t1").val(parts.join("-izzle."));
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>Pimp My Text</h1>
+		<div>
+			<img src="pimpin.jpg" alt="Marty Stepp, pimpin' it!" />
+		</div>
+		<form>
+			<fieldset>
+				<legend>Text</legend>
+				<textarea id="t1" type="text" name="text" rows="4" cols="30"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Pimpification</legend>
+				<button type="button" onclick="bigger_text()">Bigger Pimpin!</button>
+				</br>
+				<input id="c1" type="checkbox" onclick="bling()">Bling</input>
+				</br></br>
+				<button type="button" onclick="snoopify()">Snoopify</button>
+			</fieldset>
+		</form>
+		<!-- Your UI controls go here -->
+
+	</body>
+</html>
